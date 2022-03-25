@@ -32,6 +32,29 @@
   color: #525252;
 }
 
+/* #nome {
+  font-family: "Fira Sans", Arial, sans-serif;
+  font-size: 3rem;
+  color: #141414;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #800add;
+} */
+
+/* background-image: linear-gradient(to bottom, #141414, #800add); */
+
+/* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+/* background-clip: text; */
+
+/* Alguns navegadores precisam do prefixo */
+/* -webkit-background-clip: text; */
+
+/* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+/* -webkit-text-fill-color: transparent; */
+
+/* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+/* color: black; */
+
 @media (max-width: 1000px) {
   .introducao h1 {
     font-size: 3rem;
