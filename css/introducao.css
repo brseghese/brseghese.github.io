@@ -28,12 +28,14 @@
 }
 
 .introducao p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #525252;
+  line-height: 2rem;
 }
 
 #hc {
   text-decoration: none;
+  color: white;
 }
 
 /* #nome {
