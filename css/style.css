@@ -138,6 +138,7 @@ ul {
   height: 100%;
   border-right: 1px solid var(--bg-black-50);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 10;
@@ -251,6 +252,22 @@ ul {
 
 .aside .nav li a i {
   margin-right: 15px;
+}
+
+.aside .social .social-list {
+  display: flex;
+  gap: 15px;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.aside .social .social-list a {
+  color: var(--text-black-900);
+  transition: all 0.3s ease;
+}
+
+.aside .social .social-list a:hover {
+  color: var(--skin-color);
 }
 
 /* home */
@@ -550,7 +567,7 @@ h3.my-profession {
 }
 
 .service .service-item .service-item-inner:hover {
-  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  box-shadow: 0 0 10px var(--skin-color);
 }
 
 .service .service-item .service-item-inner svg {
@@ -560,43 +577,5 @@ h3.my-profession {
 .service .service-item .service-item-inner:hover svg {
   scale: 1.25;
 }
-
-/* .service .service-item .service-item-inner .icon {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 30px;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.service .service-item .service-item-inner .icon .fa {
-  font-size: 40px;
-  line-height: 60px;
-  color: var(--skin-color);
-  transition: all 0.3s ease;
-}
-
-.service .service-item .service-item-inner:hover .icon {
-  background: var(--skin-color);
-}
-
-.service .service-item .service-item-inner:hover .icon .fa {
-  font-size: 25px;
-  color: #fff;
-}
-
-.service .service-item .service-item-inner h4 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: var(--text-black-900);
-}
-
-.service .service-item .service-item-inner p {
-  font-size: 16px;
-  color: var(--text-black-700);
-  line-height: 25px;
-} */
 
 /* portfolio */
