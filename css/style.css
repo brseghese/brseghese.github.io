@@ -411,53 +411,13 @@ h3.my-profession {
   display: inline-block;
 }
 
-.about .about-content .skills {
-  flex: 0 0 40%;
-  max-width: 40%;
-  margin-top: 40px;
+.about .about-content .personal-info .info-item p span a {
+  color: var(--text-black-700);
+  transition: all 0.3s ease;
 }
 
-.about .about-content .skills .skill-item {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.about .about-content .skills .skill-item h5 {
-  line-height: 40px;
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--text-black-900);
-  text-transform: capitalize;
-}
-
-.about .about-content .skills .skill-item {
-  margin-bottom: 25px;
-}
-
-.about .about-content .skills .skill-item .progress {
-  background-color: var(--bg-black-50);
-  height: 7px;
-  border-radius: 4px;
-  width: 100%;
-  position: relative;
-}
-
-.about .about-content .skills .skill-item .progress .progress-in {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 4px;
-  background-color: var(--skin-color);
-}
-
-.about .about-content .skills .skill-item .skill-percent {
-  position: absolute;
-  right: 0;
-  color: var(--text-black-900);
-  top: -40px;
-  font-weight: 400;
-  line-height: 40px;
+.about .about-content .personal-info .info-item p span a:hover {
+  color: var(--skin-color);
 }
 
 .about .about-content .education,
@@ -559,7 +519,7 @@ h3.my-profession {
   background-color: var(--bg-black-100);
   border: 1px solid var(--bg-black-50);
   border-radius: 10px;
-  padding: 50px 15px;
+  padding: 3em 15px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -567,11 +527,12 @@ h3.my-profession {
 }
 
 .service .service-item .service-item-inner:hover {
-  box-shadow: 0 0 10px var(--skin-color);
+  box-shadow: 0 0 0 1px var(--skin-color);
 }
 
 .service .service-item .service-item-inner svg {
   transition: all 0.3s ease;
+  max-width: 100%;
 }
 
 .service .service-item .service-item-inner:hover svg {
@@ -579,3 +540,57 @@ h3.my-profession {
 }
 
 /* portfolio */
+
+.portfolio .container {
+  padding-bottom: 40px;
+}
+
+/* .portfolio .portfolio-heading {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+} */
+
+.portfolio .portfolio-heading h2 {
+  color: var(--text-black-900);
+  font-weight: 500;
+}
+
+.portfolio .portfolio-item {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item-inner {
+  border: 10px solid var(--bg-black-100);
+  background-color: var(--bg-black-100);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.portfolio .portfolio-item .portfolio-item-inner .portfolio-img img {
+  max-width: 100%;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info {
+  background-color: var(--bg-black-900);
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info h3 {
+  color: var(--text-black-900);
+  font-size: 18px;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info ul {
+  display: flex;
+  gap: 15px;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info ul li a {
+  color: var(--text-black-900);
+  font-size: 18px;
+}
