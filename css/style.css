@@ -257,7 +257,7 @@ ul {
 .aside .social .social-list {
   display: flex;
   gap: 15px;
-  margin-top: 50px;
+  margin-top: 60px;
   font-size: 20px;
 }
 
@@ -518,6 +518,12 @@ h3.my-profession {
   background-color: var(--bg-black-100);
   border-radius: 10px;
   cursor: pointer;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-item-inner:hover {
+  opacity: 1;
 }
 
 .portfolio .portfolio-item .portfolio-item-inner .portfolio-img img {
@@ -612,6 +618,11 @@ h3.my-profession {
 .contact .contact-info .icon .fa {
   font-size: 25px;
   color: var(--skin-color);
+  transition: all 0.3s ease;
+}
+
+.contact .contact-info .icon .fa:hover {
+  transform: scale(1.25);
 }
 
 .contact .contact-info h4 {
@@ -626,4 +637,53 @@ h3.my-profession {
   line-height: 25px;
   font-weight: 400;
   color: var(--text-black-700);
+}
+
+/* responsive */
+
+@media (max-width: 1199px) {
+  .aside {
+    left: -270px;
+  }
+
+  .main-content {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .service .service-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+
+  .home .home-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .home .home-img {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact .contact-form .col-6,
+  .contact .contact-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .portfolio .portfolio-item,
+  .about .about-content .education,
+  .about .about-content .bootcamp {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .service .service-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
