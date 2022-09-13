@@ -527,24 +527,22 @@ h3.my-profession {
 .portfolio .portfolio-item-inner .portfolio-info {
   background-color: var(--bg-black-900);
   padding: 10px 10px;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.portfolio .portfolio-item-inner .portfolio-info h3 {
-  color: var(--text-black-900);
-  font-size: 18px;
-}
-
-.portfolio .portfolio-item-inner .portfolio-info ul {
-  display: flex;
-  gap: 15px;
-}
-
 .portfolio .portfolio-item-inner .portfolio-info ul li a {
   color: var(--text-black-900);
   font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info ul li a:hover {
+  color: var(--skin-color);
 }
 
 /* contact */
