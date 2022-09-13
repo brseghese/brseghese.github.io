@@ -8,6 +8,14 @@
   --text-black-700: #504e70;
 }
 
+body.dark {
+  --bg-black-900: #151515;
+  --bg-black-100: #222222;
+  --bg-black-50: #393939;
+  --text-black-900: #ffffff;
+  --text-black-700: #e9e9e9;
+}
+
 body {
   line-height: 1.5;
   font-size: 16px;
@@ -37,14 +45,38 @@ ul {
   display: block;
   padding: 0 30px;
   opacity: 1;
+  position: fixed;
+  left: 270px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+}
+
+.section.back-section {
+  z-index: 1;
+}
+
+.section.active {
+  z-index: 2;
+  opacity: 1;
+  animation: slideSection 1s ease;
+}
+
+@keyframes slideSection {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translate(0%);
+  }
 }
 
 .hidden {
   display: none !important;
-}
-
-.main-content {
-  padding-left: 270px;
 }
 
 .padd-15 {
@@ -142,6 +174,7 @@ ul {
   justify-content: center;
   align-items: center;
   z-index: 10;
+  transition: all 0.3s ease;
 }
 
 .aside .logo {
@@ -198,6 +231,7 @@ ul {
   display: none;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .aside .nav-toggler span {
@@ -206,6 +240,10 @@ ul {
   background: var(--skin-color);
   display: inline-block;
   position: relative;
+}
+
+.aside .nav-toggler.open span {
+  background-color: transparent;
 }
 
 .aside .nav-toggler span::before {
@@ -218,6 +256,11 @@ ul {
   left: 0;
 }
 
+.aside .nav-toggler.open span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
 .aside .nav-toggler span::after {
   content: "";
   height: 2px;
@@ -226,6 +269,11 @@ ul {
   position: absolute;
   top: 6px;
   left: 0;
+}
+
+.aside .nav-toggler.open span::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 
 .aside .nav {
@@ -261,13 +309,13 @@ ul {
   font-size: 20px;
 }
 
-.aside .social .social-list a {
-  color: var(--text-black-900);
+.aside .social .social-list a i {
+  color: var(--skin-color);
   transition: all 0.3s ease;
 }
 
-.aside .social .social-list a:hover {
-  color: var(--skin-color);
+.aside .social .social-list a:hover i {
+  transform: scale(1.3);
 }
 
 /* home */
@@ -293,6 +341,10 @@ h3.hello span {
   font-size: 32px;
   font-weight: 700;
   color: var(--skin-color);
+}
+
+.my-profession .e-sou {
+  font-size: 20px;
 }
 
 h3.my-profession {
@@ -642,12 +694,33 @@ h3.my-profession {
 /* responsive */
 
 @media (max-width: 1199px) {
+  .section .container {
+    padding-top: 70px;
+  }
+
   .aside {
     left: -270px;
   }
 
-  .main-content {
-    padding-left: 0;
+  .aside.open {
+    left: 0;
+  }
+
+  .aside .nav-toggler {
+    display: flex;
+    left: 30px;
+  }
+
+  .aside .nav-toggler.open {
+    left: 300px;
+  }
+
+  .section {
+    left: 0;
+  }
+
+  .section.open {
+    left: 270px;
   }
 }
 

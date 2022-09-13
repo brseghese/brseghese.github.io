@@ -12,6 +12,43 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+    <!-- ===== Style Switcher ===== -->
+    <link
+      rel="stylesheet"
+      href="./css/skins/color-1.css"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="./css/skins/color-2.css"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="./css/skins/color-3.css"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="./css/skins/color-4.css"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="./css/skins/color-5.css"
+      class="alternate-style"
+      title="color-5"
+      disabled
+    />
+    <link rel="stylesheet" href="./css/style-switcher.css" />
   </head>
   <body>
     <!-- ===== Main Container Start ===== -->
@@ -26,20 +63,19 @@
         </div>
         <ul class="nav">
           <li>
-            <a href="#" class="active"><i class="fa fa-home"></i>Home</a>
+            <a href="#home" class="active"><i class="fa fa-home"></i>Home</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-user"></i> Sobre</a>
+            <a href="#about"><i class="fa fa-user"></i> Sobre</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-code"></i>Stack</a>
-            <!-- fa-list -->
+            <a href="#service"><i class="fa fa-code"></i>Stack</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-briefcase"></i>Portfolio</a>
+            <a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-comments"></i>Contato</a>
+            <a href="#contact"><i class="fa fa-comments"></i>Contato</a>
           </li>
         </ul>
         <div class="social">
@@ -82,15 +118,16 @@
       <!-- ===== Main Content Start ===== -->
       <div class="main-content">
         <!-- ===== Home Section Start ===== -->
-        <section class="home section">
+        <section class="home active section" id="home">
           <div class="container">
             <div class="row">
               <div class="home-info padd-15">
                 <h3 class="hello">
-                  Olá, meu nome é <span class="name">Bruno Seghese</span>
+                  Olá, meu nome é <span class="name"> Bruno Seghese </span>
                 </h3>
                 <h3 class="my-profession">
-                  <span class="typing">Full Stack Web Developer</span>
+                  <span class="e-sou"> Sou </span
+                  ><span class="typing">Full Stack Web Developer</span>
                 </h3>
                 <p>
                   Estou sempre buscando me especializar em desenvolvimento de
@@ -98,7 +135,9 @@
                   desenvolver projetos com qualidade, utilizando as melhores
                   técnicas e padrões de desenvolvimento.
                 </p>
-                <a href="#contact" class="btn hire-me">Contrate-me</a>
+                <a href="#contact" data-section-index="1" class="btn hire-me"
+                  >Contrate-me</a
+                >
               </div>
               <div class="home-img padd-15">
                 <svg viewBox="0 0 500 500">
@@ -1185,7 +1224,7 @@
         </section>
         <!-- ===== Home Section End ===== -->
         <!-- ===== About Section Start ===== -->
-        <section class="about section">
+        <section class="about section" id="about">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -1201,11 +1240,10 @@
                       <span>Full Stack Web Developer</span>
                     </h3>
                     <p>
-                      Sou apaixonado por programção, computadores e tecnologias.
-                      Estou sempre buscando aprimorar meus conhecimentos como
-                      desenvolvedor. Tenho como objetivo desenvolver software de
-                      qualidade que façam a diferença para melhorar a vida das
-                      pessoas através da tecnologia.
+                      Sou formado em Ciência da Computação, apaixonado por
+                      programação, com foco em desenvolvimento Web. Meu objetivo
+                      é desenvolver softwares de qualidade que façam a diferença
+                      na vida das pessoas.
                     </p>
                   </div>
                 </div>
@@ -1339,7 +1377,7 @@
         </section>
         <!-- ===== About Section End ===== -->
         <!-- ===== Services Section Start ===== -->
-        <div class="service section">
+        <section class="service section" id="service">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -1695,10 +1733,10 @@
               <!-- ===== Service Item End ===== -->
             </div>
           </div>
-        </div>
+        </section>
         <!-- ===== Services Section End ===== -->
         <!-- ===== Portfolio Section Start ===== -->
-        <section class="portfolio section">
+        <section class="portfolio section" id="portfolio">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -1958,7 +1996,7 @@
         </section>
         <!-- ===== Portfolio Section End ===== -->
         <!-- ===== Contact Section Start ===== -->
-        <section class="contact section">
+        <section class="contact section" id="contact">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -2052,7 +2090,30 @@
       <!-- ===== Main Content End ===== -->
     </div>
     <!-- ===== Main Container End ===== -->
+    <!-- ===== Style Switcher Start ===== -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="fas"></i>
+      </div>
+      <h4>Tema de Cores</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
+    </div>
+    <!-- ===== Style Switcher End ===== -->
     <!-- ===== JS Files ===== -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+      referrerpolicy="no-referrer"
+    ></script> -->
     <script src="./js/script.js"></script>
+    <script src="./js/style-switcher.js"></script>
   </body>
 </html>
