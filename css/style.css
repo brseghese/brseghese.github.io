@@ -374,54 +374,11 @@ h3.my-profession {
   font-size: 16px;
   line-height: 25px;
   color: var(--text-black-700);
-}
-
-.about .about-content .personal-info {
-  flex: 0 0 50%;
-  max-width: 50%;
-  margin-top: 40px;
-}
-
-.about .about-content .personal-info .info-item {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.about .about-content .personal-info .info-item p {
-  font-weight: 600;
-  padding: 10px 0;
-  font-size: 16px;
-  color: var(--text-black-900);
-  border-bottom: 1px solid var(--bg-black-50);
-}
-
-.about .about-content .personal-info .buttons {
-  margin-top: 30px;
-}
-
-.about .about-content .personal-info .buttons .btn {
-  margin-right: 15px;
-  margin-top: 10px;
-}
-
-.about .about-content .personal-info .info-item p span {
-  font-weight: 400;
-  color: var(--text-black-700);
-  margin-left: 4px;
-  display: inline-block;
-}
-
-.about .about-content .personal-info .info-item p span a {
-  color: var(--text-black-700);
-  transition: all 0.3s ease;
-}
-
-.about .about-content .personal-info .info-item p span a:hover {
-  color: var(--skin-color);
+  margin-bottom: 30px;
 }
 
 .about .about-content .education,
-.about .about-content .experience {
+.about .about-content .bootcamp {
   flex: 0 0 50%;
   max-width: 50%;
   margin-top: 30px;
@@ -545,12 +502,6 @@ h3.my-profession {
   padding-bottom: 40px;
 }
 
-/* .portfolio .portfolio-heading {
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin-bottom: 40px;
-} */
-
 .portfolio .portfolio-heading h2 {
   color: var(--text-black-900);
   font-weight: 500;
@@ -602,7 +553,7 @@ h3.my-profession {
   color: var(--skin-color);
   text-align: center;
   font-size: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .contact .contact-form {
@@ -621,7 +572,7 @@ h3.my-profession {
 }
 
 .contact .contact-form .form-item {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .contact .contact-form .form-item .form-control {
@@ -647,4 +598,34 @@ h3.my-profession {
 .contact .contact-form .btn {
   height: 50px;
   padding: 0 50px;
+  margin-bottom: 30px;
+}
+
+.contact .contact-info {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  text-align: center;
+}
+
+.contact .contact-info .icon {
+  display: inline-block;
+}
+
+.contact .contact-info .icon .fa {
+  font-size: 25px;
+  color: var(--skin-color);
+}
+
+.contact .contact-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  margin: 15px 0 5px;
+}
+
+.contact .contact-info p {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  color: var(--text-black-700);
 }
