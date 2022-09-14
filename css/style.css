@@ -331,12 +331,12 @@ ul {
   max-width: 60%;
 }
 
-h3.hello {
+h3.hello span.ola {
   font-size: 20px;
   margin: 15px 0;
 }
 
-h3.hello span {
+h3.hello span.name {
   font-family: "Clicker Script", cursive;
   font-size: 32px;
   font-weight: 700;
@@ -758,5 +758,18 @@ h3.my-profession {
   .service .service-item {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+}
+
+@media (max-width: 424px) {
+  h3.hello span.ola {
+    display: none;
+  }
+  h3.hello span.name {
+    color: var(--text-black-900);
+    font-weight: bold;
+  }
+  h3.my-profession span.e-sou {
+    display: none;
   }
 }

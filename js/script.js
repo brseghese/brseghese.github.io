@@ -1,14 +1,3 @@
-/* ===== typing animation */
-
-// var typed = new Typed(".typing", {
-//   strings: ["Full Stack Web Developer"],
-//   typeSpeed: 100,
-//   BackSpeed: 60,
-//   loop: true,
-// });
-
-/* ===== Aside ===== */
-
 const nav = document.querySelector(".nav"),
   navList = nav.querySelectorAll("li"),
   totalNavList = navList.length,

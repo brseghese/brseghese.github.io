@@ -123,7 +123,8 @@
             <div class="row">
               <div class="home-info padd-15">
                 <h3 class="hello">
-                  Olá, meu nome é <span class="name"> Bruno Seghese </span>
+                  <span class="ola">Olá, meu nome é </span>
+                  <span class="name"> Bruno Seghese </span>
                 </h3>
                 <h3 class="my-profession">
                   <span class="e-sou"> Sou </span
@@ -136,7 +137,7 @@
                   técnicas e padrões de desenvolvimento.
                 </p>
                 <a href="#contact" data-section-index="1" class="btn hire-me"
-                  >Contrate-me</a
+                  >Contato</a
                 >
               </div>
               <div class="home-img padd-15">
@@ -2007,54 +2008,72 @@
               Vamos conversar ? Estou a disposição !
             </h3>
             <!-- ===== Contact Form Start ===== -->
-            <div class="row">
-              <div class="contact-form padd-15">
-                <div class="row">
-                  <div class="form-item col-6 padd-15">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Nome"
-                      />
+            <form
+              action="https://formsubmit.co/54e8018d3ac4f61ff7d64340b0efbc09"
+              method="POST"
+            >
+              <div class="row">
+                <div class="contact-form padd-15">
+                  <div class="row">
+                    <div class="form-item col-6 padd-15">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Nome"
+                          name="name"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-item col-6 padd-15">
+                      <div class="form-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          placeholder="Email"
+                          name="email"
+                          required
+                        />
+                      </div>
                     </div>
                   </div>
-                  <div class="form-item col-6 padd-15">
-                    <div class="form-group">
-                      <input
-                        type="email"
-                        class="form-control"
-                        placeholder="Email"
-                      />
+                  <div class="row">
+                    <div class="form-item col-12 padd-15">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Assunto"
+                          name="subject"
+                          required
+                        />
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-item col-12 padd-15">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Assunto"
-                      />
+                    <div class="form-item col-12 padd-15">
+                      <div class="form-group">
+                        <textarea
+                          class="form-control"
+                          id=""
+                          placeholder="Mensagem"
+                          name="message"
+                          required
+                        ></textarea>
+                        <input type="hidden" name="_captcha" value="false" />
+                        <input
+                          type="hidden"
+                          name="_next"
+                          value="https://brseghese.netlify.app/contato.html"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-item col-12 padd-15">
-                    <div class="form-group">
-                      <textarea
-                        name=""
-                        class="form-control"
-                        id=""
-                        placeholder="Mensagem"
-                      ></textarea>
+                    <div class="form-item col-12 padd-15">
+                      <button type="submit" class="btn">Enviar Mensagem</button>
                     </div>
-                  </div>
-                  <div class="form-item col-12 padd-15">
-                    <button type="submit" class="btn">Enviar Mensagem</button>
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
             <!-- ===== Contact Form End ===== -->
             <!-- ===== Contact Info Start ===== -->
             <div class="row">
@@ -2087,6 +2106,7 @@
         </section>
         <!-- ===== Contact Section End ===== -->
       </div>
+      <!-- ===== Portfolio Section End ===== -->
       <!-- ===== Main Content End ===== -->
     </div>
     <!-- ===== Main Container End ===== -->
@@ -2109,10 +2129,6 @@
     </div>
     <!-- ===== Style Switcher End ===== -->
     <!-- ===== JS Files ===== -->
-    <!-- <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
-      referrerpolicy="no-referrer"
-    ></script> -->
     <script src="./js/script.js"></script>
     <script src="./js/style-switcher.js"></script>
   </body>
