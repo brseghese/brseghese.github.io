@@ -70,6 +70,7 @@ ul {
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translate(0%);
   }
@@ -85,7 +86,7 @@ ul {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1280px;
   width: 100%;
   margin: auto;
 }
@@ -105,6 +106,13 @@ ul {
   font-size: 36px;
   color: var(--text-black-900);
   font-weight: 700;
+  position: relative;
+}
+
+.section-title h4 {
+  font-size: 18px;
+  color: var(--text-black-900);
+  font-weight: 400;
   position: relative;
 }
 
@@ -560,7 +568,7 @@ h3.my-profession {
 }
 
 .portfolio .portfolio-item {
-  flex: 0 0 50%;
+  flex: 0 0 33%;
   max-width: 50%;
   margin-bottom: 30px;
 }
@@ -601,6 +609,10 @@ h3.my-profession {
 
 .portfolio .portfolio-item-inner .portfolio-info ul li a:hover {
   color: var(--skin-color);
+}
+
+.portfolio .portfolio-item-inner .portfolio-info h4 {
+  color: var(--text-black-900);
 }
 
 /* contact */
@@ -738,9 +750,15 @@ h3.my-profession {
   .home .home-img {
     display: none;
   }
+
+  .portfolio .portfolio-item {
+    flex: 0 0 50%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
+
   .contact .contact-form .col-6,
   .contact .contact-info {
     flex: 0 0 100%;
@@ -748,7 +766,6 @@ h3.my-profession {
     margin-bottom: 30px;
   }
 
-  .portfolio .portfolio-item,
   .about .about-content .education,
   .about .about-content .bootcamp {
     flex: 0 0 100%;
@@ -759,17 +776,26 @@ h3.my-profession {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
+  .portfolio .portfolio-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
 }
 
 @media (max-width: 424px) {
   h3.hello span.ola {
     display: none;
   }
+
   h3.hello span.name {
     color: var(--text-black-900);
     font-weight: bold;
   }
+
   h3.my-profession span.e-sou {
     display: none;
   }
+
 }
